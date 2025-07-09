@@ -32,7 +32,7 @@ The Sendon node supports the following operations:
 
 To use this node, you need a Sendon account and API credentials.
 
-1. Sign up at [Sendon](https://sendon.io/) as business type and obtain your Sendon ID and API Key.
+1. Sign up at [Sendon](https://sendon.io/) as a business user. **Note: Only users with a registered business in South Korea are eligible to use Sendon.** After registration, obtain your Sendon ID and API Key.
 2. Charge your credits or points to send messages.
 3. Generate your API Key in your settings.
 4. In n8n, go to **Settings** → **Credentials**.
