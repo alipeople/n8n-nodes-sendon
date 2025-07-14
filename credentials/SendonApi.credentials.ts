@@ -6,7 +6,7 @@ import {
 export class SendonApi implements ICredentialType {
   name = 'sendonApi';
   displayName = 'Sendon API';
-  documentationUrl = 'https://sendon.io/docs';
+  documentationUrl = 'https://api.sendon.io/swagger';
   properties: INodeProperties[] = [
     {
       displayName: 'Sendon ID',
