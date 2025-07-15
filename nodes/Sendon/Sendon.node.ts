@@ -1,4 +1,3 @@
-import { Buffer } from 'buffer';
 import {
   IExecuteFunctions,
   INodeExecutionData,
@@ -82,7 +81,7 @@ export class Sendon implements INodeType {
       apiKey: string;
     };
 
-    const basicAuth = Buffer.from(`${credentials.id}:${credentials.apiKey}`).toString('base64');
+    const basicAuth = btoa(`${credentials.id}:${credentials.apiKey}`);
 
     for (let i = 0; i < items.length; i++) {
       const baseUrl = 'https://api.sendon.io';
@@ -93,7 +92,8 @@ export class Sendon implements INodeType {
 
       // type 자동 판별
       if (!type || type === 'auto') {
-        const byteLength = Buffer.byteLength(message, 'utf8');
+        const encoder = new TextEncoder();
+        const byteLength = encoder.encode(message).length;
         if (byteLength <= 90) {
           type = 'SMS';
         } else {
