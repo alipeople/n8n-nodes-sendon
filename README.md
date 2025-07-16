@@ -98,7 +98,7 @@ For more usage help, see the [Try it out](https://docs.n8n.io/try-it-out/) docum
 ## Resources
 
 - [n8n community nodes documentation](https://docs.n8n.io/integrations/#community-nodes)
-- [Sendon API documentation](https://sendon.io/docs)
+- [Sendon API documentation](https://api.sendon.io/swagger)
 
 ## Version history
 
