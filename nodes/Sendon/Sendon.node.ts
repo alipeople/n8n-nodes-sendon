@@ -76,13 +76,6 @@ export class Sendon implements INodeType {
     const items = this.getInputData();
     const returnData: INodeExecutionData[] = [];
 
-    const credentials = await this.getCredentials('sendonApi') as {
-      id: string;
-      apiKey: string;
-    };
-
-    const basicAuth = btoa(`${credentials.id}:${credentials.apiKey}`);
-
     for (let i = 0; i < items.length; i++) {
       const baseUrl = 'https://api.sendon.io';
 
@@ -116,11 +109,10 @@ export class Sendon implements INodeType {
         ...(title ? { title } : {}),
       };
 
-      const response = await this.helpers.httpRequest({
+      const response = await this.helpers.httpRequestWithAuthentication.call(this, 'sendonApi', {
         method: 'POST',
         url: `${baseUrl}/v2/messages/sms`,
         headers: {
-          Authorization: `Basic ${basicAuth}`,
           'Content-Type': 'application/json',
         },
         body,

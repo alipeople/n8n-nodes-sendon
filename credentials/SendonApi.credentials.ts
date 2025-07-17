@@ -30,8 +30,9 @@ export class SendonApi implements ICredentialType {
   authenticate: IAuthenticateGeneric = {
     type: 'generic',
     properties: {
-      headers: {
-        Authorization: '={{"Basic " + Buffer.from($credentials.id + ":" + $credentials.apiKey).toString("base64")}}',
+      auth: {
+        username: '={{$credentials.id}}',
+        password: '={{$credentials.apiKey}}',
       },
     },
   };
