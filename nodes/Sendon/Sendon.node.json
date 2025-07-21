@@ -1,0 +1,19 @@
+{
+	"node": "n8n-nodes-base.sendon",
+	"nodeVersion": "0.1.4",
+	"codexVersion": "1.0",
+	"categories": ["Development", "Marketing & Content", "Utility"],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://sdk.sendon.io/update/docs/generate-api-key#/"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://sdk.sendon.io/docs/welcome#/"
+			}
+		]
+	},
+	"alias": ["SMS", "LMS", "MMS", "Sendon"]
+}
