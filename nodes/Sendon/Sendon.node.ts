@@ -114,6 +114,7 @@ export class Sendon implements INodeType {
         url: `${baseUrl}/v2/messages/sms`,
         headers: {
           'Content-Type': 'application/json',
+					'user-agent': 'n8n-workflow',
         },
         body,
         json: true,
