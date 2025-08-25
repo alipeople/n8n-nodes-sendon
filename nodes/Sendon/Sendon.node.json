@@ -6,12 +6,12 @@
 	"resources": {
 		"credentialDocumentation": [
 			{
-				"url": "https://sdk.sendon.io/update/docs/generate-api-key#/"
+				"url": "https://sdk.sendon.io/reference/1-api-key-%EB%B0%9C%EA%B8%89%EB%B0%9B%EA%B8%B0"
 			}
 		],
 		"primaryDocumentation": [
 			{
-				"url": "https://sdk.sendon.io/docs/welcome#/"
+				"url": "https://sdk.sendon.io"
 			}
 		]
 	},

@@ -1,14 +1,14 @@
 import {
-  IAuthenticateGeneric,
-  ICredentialTestRequest,
-  ICredentialType,
-  INodeProperties
+	IAuthenticateGeneric,
+	ICredentialTestRequest,
+	ICredentialType,
+	INodeProperties
 } from 'n8n-workflow';
 
+// eslint-disable-next-line n8n-nodes-base/cred-class-field-documentation-url-missing
 export class SendonApi implements ICredentialType {
   name = 'sendonApi';
   displayName = 'Sendon API';
-  documentationUrl = 'https://api.sendon.io/swagger';
   properties: INodeProperties[] = [
     {
       displayName: 'Sendon ID',
